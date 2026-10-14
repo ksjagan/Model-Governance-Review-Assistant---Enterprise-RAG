@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docgov-review-assistant"
+version = "0.1.0"
+description = "Document intelligence assistant for model governance review PDFs."
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.30.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.1",
+    "pypdfium2>=4.30.0",
+    "chromadb>=0.5.5",
+    "Pillow>=10.0.0",
+    "scikit-learn>=1.4.0",
+    "streamlit>=1.36.0",
+    "requests>=2.32.0",
+    "langchain>=0.2.12",
+    "langchain-openai>=0.1.22",
+    "langchain-text-splitters>=0.2.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
